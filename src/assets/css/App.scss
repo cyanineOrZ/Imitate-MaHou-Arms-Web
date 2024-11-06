@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-width: 500px;
+  font-size: 16px; // 基准字体大小
+  font-family: 'PlayfairDisplay', 'SpecialElite', serif;
+}
+body {
+  background-color: #c02924;
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url("../src/assets/font/PlayfairDisplay-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'SpecialElite';
+  src: url("../src/assets/font/SpecialElite-Regular.ttf");
+}

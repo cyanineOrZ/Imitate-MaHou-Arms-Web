@@ -1,0 +1,31 @@
+.body {
+  position: relative;
+  margin-top: 10px;
+  width: 100%;
+  height: 415vh;
+
+
+  .background-img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat-y;
+    z-index: -100;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.seperator {
+  position: relative;
+  height: 8px;
+  width: 100%;
+  background-image: url("../../assets/img/body/footer/footer-seperator.png");
+  background-repeat: repeat-x;
+  background-size: 2470px 8px;
+  z-index: 10;
+}

@@ -1,0 +1,26 @@
+.buy-contain {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../../assets/img/body/buy/buy_background.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  .buy-square-contain {
+    position: absolute;
+    height: calc((100vw - 15px) / 100 * 26);
+    width: 26%;
+    background: black;
+    .square-item {
+
+    }
+  }
+
+  @media screen and (max-width: 800px){
+    .buy-square-contain {
+      height: calc((100vw - 15px) / 100 * 50);
+      width: 50%;
+    }
+  }
+}
+
