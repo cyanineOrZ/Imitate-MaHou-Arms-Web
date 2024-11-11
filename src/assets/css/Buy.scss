@@ -1,5 +1,6 @@
 @import "public";
 .buy-contain {
+  position: relative;
   width: 100%;
   min-height: 100vh;
   background-image: url("../../assets/img/body/buy/buy_background.png");
@@ -9,12 +10,14 @@
 
   .buy-square-contain {
     position: absolute;
-    //top: ;
+    top: 37.5%;
     right: 25%;
     display: flex;
     flex-wrap: wrap;
     height: calc((((100vw - 15px) / 4 * 3) / 100 * 26) / 2 * 1.414);
     width: calc((26% / 4 * 3) / 2 * 1.414);
+    min-width: 200px;
+    min-height: 200px;
     rotate: -135deg;
 
     .square-item {

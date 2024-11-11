@@ -23,12 +23,13 @@ export default class Buy extends React.Component {
             <>
                 <div className={'buy-contain'}>
                     <div className={'buy-square-contain'}>
-                        {this.state.linkList.map((item) => {
+                        {this.state.linkList.map((item, index) => {
                             return (
-                                <BuySquare png={item.png} link={item.link}></BuySquare>
+                                <BuySquare png={item.png} link={item.link} key={index}></BuySquare>
                             )
                         })}
                     </div>
+                    <div className={'seperator'} style={{position: 'absolute', bottom: '-4px'}}></div>
                 </div>
             </>
         );
@@ -41,9 +42,7 @@ class BuySquare extends React.Component {
         super(props);
     }
 
-    state = {
-
-    }
+    state = {}
 
     render() {
         return (
