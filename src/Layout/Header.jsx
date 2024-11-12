@@ -1,5 +1,5 @@
 import React from "react";
-import '../assets/css/Header.scss'
+import '../assets/css/Layout/Header.scss'
 
 import Discord_Png from '../assets/img/header/discord_small.png'
 import Twitter_Png from '../assets/img/header/twitter_small.png'

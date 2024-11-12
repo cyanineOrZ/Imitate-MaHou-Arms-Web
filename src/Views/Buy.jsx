@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../assets/css/Buy.scss'
+import '../assets/css/Views/Buy.scss'
 import Steam from "../assets/img/body/buy/buy_store_button_steam.png";
 import Sekai from "../assets/img/body/buy/buy_store_button_sekai.png";
 import Denpa from "../assets/img/body/buy/buy_store_button_denpa.png";

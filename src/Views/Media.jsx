@@ -1,6 +1,9 @@
 import React from "react";
 
-import '../assets/css/Media.scss'
+import media_sep from '../assets/img/body/media/media-video-header-sep.png'
+import media_underLine from '../assets/img/body/media/media_underline.png'
+
+import '../assets/css/Views/Media.scss'
 
 export default class Media extends React.Component {
     render() {
@@ -32,7 +35,18 @@ class VideoContent extends React.Component {
         return (
             <div className={'video-contain'}>
                 <div className={'media-header'}>
-                    <img src={'../../assets/img/body/media/media-video-header-sep'} alt={''} className={'media-header-image'}></img>
+                    <img src={media_sep} alt={''} className={'media-header-image'}></img>
+                </div>
+                <div className={'media-video'}>
+                    <span className={'title'}>Media</span>
+                    <div  className={'video-contain'}>
+                        <iframe src="https://www.youtube.com/embed/K0RmhKXmvqg" frameBorder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen=""></iframe>
+                    </div>
+                    <div style={{display: "flex", justifyContent: 'center', paddingTop: '10px'}}>
+                        <img src={media_underLine} alt={''} className={'underline'}/>
+                    </div>
                 </div>
             </div>
         )

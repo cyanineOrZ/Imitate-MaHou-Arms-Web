@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../assets/css/Story.scss'
+import '../assets/css/Views/Story.scss'
 
 export default class Story extends React.Component {
     render() {

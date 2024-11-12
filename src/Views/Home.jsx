@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../assets/css/Home.scss'
+import '../assets/css/Views/Home.scss'
 
 import Logo from '../assets/img/body/home/game_logo.png';
 import Steam from '../assets/img/body/home/steam_top.png';

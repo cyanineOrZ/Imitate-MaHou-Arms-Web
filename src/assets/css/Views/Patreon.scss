@@ -1,0 +1,38 @@
+.patreon_contain {
+  position: relative;
+  height: 56.25vw;
+
+  .content-contain {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("../src/assets/img/body/parteron/parteron_background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 1;
+  }
+
+  .patreon-content-contain {
+    position: absolute;
+    width: 405px;
+    height: 270px;
+    left: 7%;
+    bottom: 45px;
+    font-family: 'SpecialElite', serif;
+    color: #FFFFFF;
+    cursor: pointer;
+    z-index: 2;
+
+    .link-image {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .patreon-content-contain {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.story-contain {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("src/assets/img/body/story/story_background.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: -101;
+}
