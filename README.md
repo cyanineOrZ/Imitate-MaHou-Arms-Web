@@ -1,5 +1,5 @@
 # Imitate-MaHou-Arms-Web
-模仿魔道兵装官网
+模仿魔道兵装官网，React练手项目
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
