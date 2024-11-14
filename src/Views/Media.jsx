@@ -3,6 +3,8 @@ import React from "react";
 import media_sep from '../assets/img/body/media/media-video-header-sep.png'
 import media_underLine from '../assets/img/body/media/media_underline.png'
 
+import swiper_button_png from '../assets/img/body/media/swiper-button.png'
+
 import '../assets/css/Views/Media.scss'
 
 export default class Media extends React.Component {
@@ -13,7 +15,7 @@ export default class Media extends React.Component {
 
                 <VideoContent></VideoContent>
 
-                <div className={'seperator'} style={{position: 'absolute', top: '50%', translate: '0 -50%'}}></div>
+                <div className={'seperator'} style={{position: 'absolute', top: '50%', translate: '0 50%'}}></div>
 
                 <SwiperContent></SwiperContent>
 
@@ -61,7 +63,15 @@ class SwiperContent extends React.Component {
     render() {
         return (
             <div className={'swiper-contain'}>
-
+                <div className={'swiper-header'}>
+                    <div>Gallery</div>
+                </div>
+                <div className={'swiper-content-contain'}>
+                    <div className={'swiper-picture-show'}></div>
+                    <div className={'swiper-bottom'}></div>
+                    <div className={'swiper-button'} style={{left: '-2%'}}><img src={swiper_button_png} alt={''}/></div>
+                    <div className={'swiper-button'} style={{right: '-2%', top: '34.75vh', rotate: '180deg'}}><img src={swiper_button_png} alt={''}/></div>
+                </div>
             </div>
         )
     }

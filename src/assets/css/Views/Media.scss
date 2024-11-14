@@ -80,6 +80,43 @@
     position: relative;
     padding-bottom: 70px;
     height: 100vh;
+    background-image: url("../src/assets/img/body/media/swiper_bottom_bg.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
     z-index: 1;
+
+    .swiper-header {
+      margin-top: 45px;
+      color: #e5e5e5;
+      font-size: 2em;
+      text-align: center;
+      background-image: url("../src/assets/img/body/media/swiper_header.png");
+      background-size: 784px auto;
+      background-position: center 60%;
+      background-repeat: no-repeat;
+    }
+
+    .swiper-content-contain {
+      position: relative;
+      top: -8px;
+      margin: 0 auto;
+      padding: 0 12px;
+      width: 125vh;
+      height: 70vh;
+      background: #e5e5e5;
+    }
+
+    .swiper-button {
+      position: absolute;
+      top: 35vh;
+      cursor: pointer;
+
+      img {
+        height: 10vh;
+        object-fit: contain;
+      }
+    }
   }
 }
