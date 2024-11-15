@@ -33,6 +33,7 @@
         font-weight: bold;
         color: black;
         text-decoration: none;
+        cursor: pointer;
         transition: 0.2s ease;
       }
 
@@ -53,7 +54,7 @@
 
       .menu-item:hover {
         color: #e9edee;
-        background: black;
+        background: #c02924;
       }
     }
 
