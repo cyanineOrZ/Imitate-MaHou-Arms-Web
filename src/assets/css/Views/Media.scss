@@ -64,15 +64,6 @@
         width: 50%;
       }
 
-      @media screen and (max-width: 125vh) {
-        .title {
-          left: 370px;
-        }
-
-        .video-contain {
-          width: 100%;
-        }
-      }
     }
   }
 
@@ -173,14 +164,43 @@
   }
 
   @media screen and (max-width: 125vh){
+    .video-contain {
+      .media-video {
+        .title {
+          left: 350px;
+        }
+
+        .video-contain {
+          width: 100%;
+        }
+      }
+    }
+
     .swiper-contain {
       margin-top: 10vh;
+
       .swiper-content-contain {
-        width: calc(100% - 27px);
+        box-sizing: border-box;
+        width: calc(100% - 24px);
 
         .swiper-picture-show {
           height: auto;
           object-fit: contain;
+        }
+
+        .thumbnails {
+          .item {
+            height: auto;
+            img {
+              object-fit: inherit;
+            }
+          }
+        }
+
+        .swiper-button {
+          img {
+            height: 10vw;
+          }
         }
       }
     }

@@ -67,7 +67,12 @@ class SwiperContent extends React.Component {
     }
 
     state = {
-        active_index: 0,
+        active_index: 0,  // 当前活跃id
+        timeElapsed: 0,  // 计时器记录
+        timeStep: 4,  // 自动轮播的步数
+        intervalSeconds: 250,  // 自动轮播的毫秒数（总时间 = timeStep * intervalSeconds
+        timer: null,  // 计时器id
+
 
         picList: [
             swiper_pic_1,
@@ -78,11 +83,53 @@ class SwiperContent extends React.Component {
         ]
     }
 
+    componentDidMount() {
+        this.autoSwiper()
+    }
+
+    // 点击事件
     changeActive = (event, index) => {
         this.setState({
+            timeElapsed: 0,
             active_index: index
         })
     }
+
+    // 点击事件
+    changeActiveClickEvent = (event, type) => {
+        if (type === 'increase') {
+            if (this.state.active_index === 4) {
+                this.setState({
+                    timeElapsed: 0,
+                    active_index: 0
+                })
+            }
+            else {
+                this.setState({
+                    timeElapsed: 0,
+                    active_index: this.state.active_index + 1
+                })
+            }
+        }
+        else if (type === 'decrease') {
+            if (this.state.active_index === 0) this.setState({
+                timeElapsed: 0,
+                active_index: 4
+            })
+            else {
+                this.setState({
+                    timeElapsed: 0,
+                    active_index: this.state.active_index - 1
+                })
+            }
+        }
+    }
+
+    // 自动轮播
+    autoSwiper = () => {}
+
+    // 清除轮播
+    clearInterVal = () => {}
 
     render() {
         return (
@@ -102,10 +149,14 @@ class SwiperContent extends React.Component {
                             )
                         })}
                     </div>
-                    <div className={'swiper-button'} style={{left: '-2%'}}><img src={swiper_button_png} alt={''}/></div>
-                    <div className={'swiper-button'} style={{right: '-2%', rotate: '180deg'}}><img src={swiper_button_png} alt={''}/></div>
+                    <div onClick={(event) => this.changeActiveClickEvent(event, 'decrease')} className={'swiper-button'} style={{left: '-2%'}}><img src={swiper_button_png} alt={''}/></div>
+                    <div onClick={(event) => this.changeActiveClickEvent(event, 'increase')} className={'swiper-button'} style={{right: '-2%', rotate: '180deg'}}><img src={swiper_button_png} alt={''}/></div>
                 </div>
             </div>
         )
+    }
+
+    componentWillUnmount() {
+        this.clearInterVal()
     }
 }
