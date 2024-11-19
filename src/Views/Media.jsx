@@ -73,7 +73,6 @@ class SwiperContent extends React.Component {
         intervalSeconds: 250,  // 自动轮播的毫秒数（总时间 = timeStep * intervalSeconds
         timer: null,  // 计时器id
 
-
         picList: [
             swiper_pic_1,
             swiper_pic_2,
@@ -82,6 +81,9 @@ class SwiperContent extends React.Component {
             swiper_pic_5
         ]
     }
+
+
+
 
     componentDidMount() {
         this.autoSwiper()
@@ -126,10 +128,26 @@ class SwiperContent extends React.Component {
     }
 
     // 自动轮播
-    autoSwiper = () => {}
+    autoSwiper = () => {
+        const timer = setInterval(() => {
+            if (this.state.timeElapsed < this.state.timeStep) {
+                this.setState({timeElapsed: this.state.timeElapsed + 1})
+            }
+            else {
+                this.setState({timeElapsed: 0})
+                this.changeActiveClickEvent(null, 'increase')
+            }
+        }, this.state.timeStep * this.state.intervalSeconds)
+        this.setState({timer})
+    }
 
     // 清除轮播
-    clearInterVal = () => {}
+    clearInterVal = () => {
+        if (this.state.timer) {
+            clearInterval(this.state.timer)
+            this.setState({timeElapsed: 0})
+        }
+    }
 
     render() {
         return (
