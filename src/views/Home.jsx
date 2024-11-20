@@ -11,9 +11,14 @@ import Patreon from '../assets/img/body/home/patreon_top.png';
 import HomeSeperatorPng from '../assets/img/body/home/head_seperator.png'
 
 export default class Home extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+
     render() {
         return (
-            <div className={'home-contain'}>
+            <div id={'Home'} className={'home-contain'}>
                 <Title></Title>
                 <HomeSeperator></HomeSeperator>
             </div>

@@ -16,7 +16,7 @@ import '../assets/css/Views/Media.scss'
 export default class Media extends React.Component {
     render() {
         return (
-            <div className={'media-contain'}>
+            <div id={'Media'} className={'media-contain'}>
                 <div className={'seperator'} style={{position: 'absolute', top: '-4px'}}></div>
 
                 <VideoContent></VideoContent>
@@ -47,9 +47,9 @@ class VideoContent extends React.Component {
                 <div className={'media-video'}>
                     <span className={'title'}>Media</span>
                     <div  className={'video-contain'}>
-                        <iframe src="https://www.youtube.com/embed/K0RmhKXmvqg" frameBorder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen=""></iframe>
+                        {/*<iframe src="https://www.youtube.com/embed/K0RmhKXmvqg" frameBorder="0"*/}
+                        {/*        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"*/}
+                        {/*        allowFullScreen=""></iframe>*/}
                     </div>
                     <div style={{display: "flex", justifyContent: 'center', paddingTop: '10px'}}>
                         <img src={media_underLine} alt={''} className={'underline'}/>

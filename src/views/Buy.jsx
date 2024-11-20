@@ -8,6 +8,7 @@ import Denpa from "../assets/img/body/buy/buy_store_button_denpa.png";
 export default class Buy extends React.Component {
     constructor(props) {
         super(props);
+
     }
 
     state = {
@@ -20,18 +21,16 @@ export default class Buy extends React.Component {
 
     render() {
         return (
-            <>
-                <div className={'buy-contain'}>
-                    <div className={'buy-square-contain'}>
-                        {this.state.linkList.map((item, index) => {
-                            return (
-                                <BuySquare png={item.png} link={item.link} key={index}></BuySquare>
-                            )
-                        })}
-                    </div>
-                    <div className={'seperator'} style={{position: 'absolute', bottom: '-4px'}}></div>
+            <div id={'Buy'} className={'buy-contain'}>
+                <div className={'buy-square-contain'}>
+                    {this.state.linkList.map((item, index) => {
+                        return (
+                            <BuySquare png={item.png} link={item.link} key={index}></BuySquare>
+                        )
+                    })}
                 </div>
-            </>
+                <div className={'seperator'} style={{position: 'absolute', bottom: '-4px'}}></div>
+            </div>
         );
     }
 }

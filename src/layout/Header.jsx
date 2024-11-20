@@ -14,7 +14,7 @@ export default class Header extends React.Component {
         return (
             <div className={'nav'}>
                 <div className={'contain'}>
-                    <HeaderMenu></HeaderMenu>
+                    <HeaderMenu target={this.props.target}></HeaderMenu>
                     <SocialMenu></SocialMenu>
                 </div>
             </div>
@@ -28,13 +28,21 @@ class HeaderMenu extends React.Component {
     }
 
     state = {
+
         link: [
             { text: 'Home' },
             { text: 'Buy' },
             { text: 'Story' },
             { text: 'Media' },
+            { text: 'About'},
             { text: 'Downloads' },
         ]
+    }
+
+    test = (event, id) => {
+        if (id.text !== 'Downloads') {
+            document.getElementById(id.text).scrollIntoView({ behavior: 'smooth' })
+        }
     }
 
     render() {
@@ -42,7 +50,7 @@ class HeaderMenu extends React.Component {
             <div className={'menu-contain'}>
                 {this.state.link.map((item, index) => {
                     return (
-                        <a className={'menu-item'} key={index}>{item.text}</a>
+                        <a onClick={event => this.test(event, item)} className={['menu-item', this.props.target === item.text? 'active': null].join(' ')} key={index}>{item.text}</a>
                     )
                 })}
             </div>

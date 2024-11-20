@@ -6,7 +6,7 @@ import linkPng from '../assets/img/body/parteron/patreon_link.png'
 export default class Patreon extends React.Component {
     render() {
         return (
-            <div className={'patreon_contain'}>
+            <div id={'About'} className={'patreon_contain'}>
                 <div className={'seperator'} style={{position: 'absolute', top: '-4px'}}></div>
                 <div className={'content-contain'}></div>
                 <a className={'patreon-content-contain'}>

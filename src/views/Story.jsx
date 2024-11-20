@@ -5,11 +5,9 @@ import '../assets/css/Views/Story.scss'
 export default class Story extends React.Component {
     render() {
         return (
-            <>
-                <div className={'story-contain'}>
+            <div id={'Story'} className={'story-contain'}>
 
-                </div>
-            </>
+            </div>
         );
     }
 }
